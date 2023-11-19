@@ -25,7 +25,9 @@ function App() {
 
   const searchedTodos = todos.filter( //El filtro que hago para ver los todos que coincidan con lo que el usuario escribe para buscar.
     (todo) => {
-      return todo.text.toLowerCase().includes(searchValue.toLowerCase()) //ambos lados de la validacion paso a minuscula asi compara sin problema no importa como este escrito
+      const todoText = todo.text.toLowerCase(); 
+      const searchText = searchValue.toLowerCase(); //ambos lados de la validacion paso a minuscula asi compara sin problema no importa como este escrito
+      return todoText.includes(searchText) 
     } 
   )
 
