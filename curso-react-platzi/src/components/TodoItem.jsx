@@ -8,9 +8,12 @@ const TodoItem =(props)=> {
      <div>
 
      <li>
-       <span> V {props.completed} </span>
+       <span
+       onClick = {props.onComplete}
+       > V {props.completed} </span>
        <p>{props.text}</p>
-       <span> X </span>
+       <span
+       onClick = {props.onDelete}> X </span>
      </li>
 
      </div>

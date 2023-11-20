@@ -1,12 +1,16 @@
 
 
 
-const TodoCounter =({total, completed})=> {
+const TodoCounter = ({ total, completed }) => {
+  return (
+    <div>
+      {total ? (
+        <h1>Has completado {completed} de {total} TODOS</h1>
+      ) : (
+        <p>Felicidades! Completaste todas las tareas </p>
+      )}
+    </div>
+  );
+}
 
-
-   return (
-     <h1> Haz completado {completed} de {total} TODOS </h1>
-   );
- }
-
- export { TodoCounter};
+export { TodoCounter };
